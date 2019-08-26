@@ -14,6 +14,8 @@ import { BooksComponent } from './books/books.component';
 import { BooksAddComponent } from './books/books-add/books-add.component';
 import { BooksRemoveComponent } from './books/books-remove/books-remove.component';
 import { BooksEditComponent } from './books/books-edit/books-edit.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {MatButtonModule} from '@angular/material';
 
 
 
@@ -28,7 +30,8 @@ import { BooksEditComponent } from './books/books-edit/books-edit.component';
     BooksComponent,
     BooksAddComponent,
     BooksRemoveComponent,
-    BooksEditComponent
+    BooksEditComponent,
+    DashboardComponent
   ],
   imports: [
     FormsModule,
@@ -36,7 +39,8 @@ import { BooksEditComponent } from './books/books-edit/books-edit.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButtonModule
   ],
   providers: [
   ],
