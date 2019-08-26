@@ -1,0 +1,17 @@
+<div class="container">
+  <table class="table table-bordered table-hover mt-3">
+    <thead>
+      <th>Nome</th>
+      <th>Summary</th>
+      <th colspan="2">Opções</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let a of book">
+      <td>{{ a.name }}</td>
+      <td>{{ a.summary }}</td>
+      <td> <a class="btn btn-primary" href="/book/{{ a.id }}"><i class="fas fa-edit"></i> Editar</a></td>
+      <td> <a class="btn btn-primary" href="/del/book/{{ a.id }}"><i class="fas fa-user-minus"></i> Deletar</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
