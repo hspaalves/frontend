@@ -9,13 +9,18 @@ import {BooksComponent} from './books/books.component';
 import {BooksEditComponent} from './books/books-edit/books-edit.component';
 import {BooksAddComponent} from './books/books-add/books-add.component';
 import {BooksRemoveComponent} from './books/books-remove/books-remove.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'author',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
+  },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
   },
   {
     path: 'author',
