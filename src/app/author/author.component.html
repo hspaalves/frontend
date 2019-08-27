@@ -1,15 +1,48 @@
-<div class="container">
-  <table class="table table-bordered table-hover mt-3">
-    <thead>
-      <th>Nome</th>
-      <th colspan="2">Opções</th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let a of author">
-        <td>{{ a.name }}</td>
-        <td> <a class="btn btn-primary" href="/author/{{ a.id }}"><i class="fas fa-edit"></i> Editar</a></td>
-        <td> <a class="btn btn-primary" href="/del/author/{{ a.id }}"><i class="fas fa-user-minus"></i> Deletar</a></td>
-      </tr>
-    </tbody>
-  </table>
+<body >
+<div class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-12">
+        <h1>Lista de autores</h1>
+      </div>
+    </div>
+  </div>
 </div>
+<div class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-12 col-sm-12 col-lg-12">
+        <div class="table-responsive">
+          <table class="table table-bordered ">
+            <thead class="thead-dark">
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th colspan="2">Opções</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let details of author | paginate: { itemsPerPage: 1, currentPage: paginaAtual }; let i = index">
+              <th>{{i}}</th>
+              <th>{{details.name}}</th>
+              <td><a class="btn btn-primary" href="/author/{{ details.id }}"><i class="fas fa-edit"></i> Editar</a></td>
+              <td><a class="btn btn-primary" href="/del/author/{{ details.id }}"><i class="fas fa-user-minus"></i> Deletar</a></td>
+            </tr>
+            </tbody>
+            <pagination-controls (pageChange)="paginaAtual = $event" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p contenteditable="false">© 2019 . All rights reserved</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

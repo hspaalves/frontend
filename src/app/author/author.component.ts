@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./author.component.scss']
 })
 export class AuthorComponent implements OnInit {
-
+  public paginaAtual = 0;
   public author: any;
   constructor(private http: HttpClient ) { }
 
