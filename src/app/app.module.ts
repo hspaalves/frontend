@@ -16,7 +16,9 @@ import { BooksRemoveComponent } from './books/books-remove/books-remove.componen
 import { BooksEditComponent } from './books/books-edit/books-edit.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatButtonModule} from '@angular/material';
-
+import { AuthorFilterComponent } from './author/author-filter/author-filter.component';
+import { BookFilterComponent } from './books/book-filter/book-filter.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -31,7 +33,9 @@ import {MatButtonModule} from '@angular/material';
     BooksAddComponent,
     BooksRemoveComponent,
     BooksEditComponent,
-    DashboardComponent
+    DashboardComponent,
+    AuthorFilterComponent,
+    BookFilterComponent
   ],
   imports: [
     FormsModule,
@@ -40,7 +44,8 @@ import {MatButtonModule} from '@angular/material';
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    NgxPaginationModule
   ],
   providers: [
   ],
