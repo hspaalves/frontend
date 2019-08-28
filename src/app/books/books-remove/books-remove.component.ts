@@ -18,7 +18,6 @@ export class BooksRemoveComponent implements OnInit {
     this.http.delete(`${apiUrl}${this.route.snapshot.paramMap.get('id')}/`).toPromise().then(ret => {
       this.book = ret;
     });
-    alert(`${apiUrl}${this.route.snapshot.paramMap.get('id')}/`);
   }
 
 }
