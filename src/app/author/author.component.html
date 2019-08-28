@@ -18,19 +18,20 @@
             <tr>
               <th>ID</th>
               <th>Nome</th>
-              <th colspan="2">Opções</th>
+              <th colspan="3">Opções</th>
             </tr>
             </thead>
             <tbody>
             <tr *ngFor="let details of author | paginate: { itemsPerPage: 1, currentPage: paginaAtual }; let i = index">
-              <th>{{i}}</th>
+              <th>{{details.id}}</th>
               <th>{{details.name}}</th>
+              <td><a class="btn btn-primary" href="/author/detail/{{ details.id }}"><i class="fas fa-list"></i> Detalhes</a></td>
               <td><a class="btn btn-primary" href="/author/{{ details.id }}"><i class="fas fa-edit"></i> Editar</a></td>
               <td><a class="btn btn-primary" href="/del/author/{{ details.id }}"><i class="fas fa-user-minus"></i> Deletar</a></td>
             </tr>
             </tbody>
-            <pagination-controls (pageChange)="paginaAtual = $event" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
           </table>
+          <pagination-controls (pageChange)="paginaAtual = $event" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
         </div>
       </div>
     </div>
