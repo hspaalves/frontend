@@ -1,0 +1,55 @@
+<body class="card-body" style="height: 89%">
+<div class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-12">
+        <h1>Detalhes do Livro</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-12 col-sm-12 col-lg-12">
+        <div class="table-responsive">
+          <table class="table table-bordered ">
+            <thead class="thead-dark">
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th [colSpan]="book.length">Authores</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let authorDetails of author">
+              <td>{{authorDetails.id}}</td>
+              <td>{{authorDetails.name}}</td>
+              <ng-container *ngFor="let bookDetails of book">
+                <ng-container *ngFor="let authorByBook of bookDetails.author; let i = index">
+                  <td *ngIf="bookDetails.author[i] ==authorDetails.id"><a href="book/detail/{{bookDetails.id}}">{{bookDetails.name}}</a></td>
+                </ng-container>
+              </ng-container>
+
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+<footer class="card-footer">
+  <div class="py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p contenteditable="false">© 2019 . All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
