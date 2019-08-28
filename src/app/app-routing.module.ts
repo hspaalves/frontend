@@ -10,8 +10,8 @@ import {BooksEditComponent} from './books/books-edit/books-edit.component';
 import {BooksAddComponent} from './books/books-add/books-add.component';
 import {BooksRemoveComponent} from './books/books-remove/books-remove.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import {AuthorFilterComponent} from './author/author-filter/author-filter.component';
-import {BookFilterComponent} from './books/book-filter/book-filter.component';
+import {BookDetailComponent} from './books/book-detail/book-detail.component';
+import {AuthorDetailComponent} from './author/author-detail/author-detail.component';
 
 
 const routes: Routes = [
@@ -37,8 +37,8 @@ const routes: Routes = [
     component: AuthorAddComponent,
   },
   {
-    path: 'author/list/:name',
-    component: AuthorFilterComponent,
+    path: 'author/detail/:id',
+    component: AuthorDetailComponent,
   },
   {
     path: 'del/author/:id',
@@ -61,8 +61,8 @@ const routes: Routes = [
     component: BooksRemoveComponent,
   },
   {
-    path: 'book/list/:name',
-    component: BookFilterComponent,
+    path: 'book/detail/:id',
+    component: BookDetailComponent,
   },
 ];
 
