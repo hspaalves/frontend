@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light border">
+  <a class="navbar-brand" href="">Inicio</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="menu">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="author/">Authores<span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="book/">Books<span class="sr-only"></span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<body>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-12">
+          <h1>Resultados da busca:</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-12 col-sm-12 col-lg-12">
+          <div class="table-responsive">
+            <table class="table table-bordered ">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Resultados</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let bookRes of bookResult">
+                  <td><a href="book/detail/{{bookRes.id}}">{{bookRes.name}} (book)</a></td>
+                </tr>
+                <tr *ngFor="let authorRes of authorResult">
+                  <td><a href="author/detail/{{authorRes.id}}">{{authorRes.name}} (Author)</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<footer class="card-footer">
+  <div class="py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p contenteditable="false">© 2019 . All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
