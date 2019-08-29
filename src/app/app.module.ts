@@ -19,6 +19,7 @@ import {MatButtonModule} from '@angular/material';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { BookDetailComponent } from './books/book-detail/book-detail.component';
 import { AuthorDetailComponent } from './author/author-detail/author-detail.component';
+import { ResultadosComponent } from './resultados/resultados.component';
 
 
 
@@ -35,7 +36,8 @@ import { AuthorDetailComponent } from './author/author-detail/author-detail.comp
     BooksEditComponent,
     DashboardComponent,
     BookDetailComponent,
-    AuthorDetailComponent
+    AuthorDetailComponent,
+    ResultadosComponent
   ],
   imports: [
     FormsModule,

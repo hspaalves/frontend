@@ -12,6 +12,7 @@ import {BooksRemoveComponent} from './books/books-remove/books-remove.component'
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {BookDetailComponent} from './books/book-detail/book-detail.component';
 import {AuthorDetailComponent} from './author/author-detail/author-detail.component';
+import {ResultadosComponent} from "./resultados/resultados.component";
 
 
 const routes: Routes = [
@@ -63,6 +64,10 @@ const routes: Routes = [
   {
     path: 'book/detail/:id',
     component: BookDetailComponent,
+  },
+  {
+    path: 'resultados/:search',
+    component: ResultadosComponent,
   },
 ];
 
