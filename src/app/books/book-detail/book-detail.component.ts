@@ -17,12 +17,11 @@ export class BookDetailComponent implements OnInit {
 
   ngOnInit() {
     const bookUrl = 'http://localhost:8000/v1/book/';
-    const authorUrl = 'http://localhost:8000/v1/author/';
+    this.http.get(`${bookUrl}${this.route.snapshot.paramMap.get('id')}/author`).toPromise().then( ret => {
+      this.author = ret;
+    });
     this.http.get(`${bookUrl}${this.route.snapshot.paramMap.get('id')}/`).toPromise().then( ret => {
       this.book = [ret];
-    });
-    this.http.get(`${authorUrl}`).toPromise().then(ret => {
-      this.author = ret;
     });
   }
 }
