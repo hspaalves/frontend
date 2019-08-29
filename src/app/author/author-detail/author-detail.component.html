@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 col-lg-12 col-sm-12 col-12">
-        <h1>Detalhes do Livro</h1>
+        <h1>Detalhes do Author</h1>
       </div>
     </div>
   </div>
@@ -18,7 +18,7 @@
             <tr>
               <th>ID</th>
               <th>Nome</th>
-              <th [colSpan]="book.length">Authores</th>
+              <th [colSpan]="book.length">Livros</th>
             </tr>
             </thead>
             <tbody>
@@ -26,11 +26,8 @@
               <td>{{authorDetails.id}}</td>
               <td>{{authorDetails.name}}</td>
               <ng-container *ngFor="let bookDetails of book">
-                <ng-container *ngFor="let authorByBook of bookDetails.author; let i = index">
-                  <td *ngIf="bookDetails.author[i] ==authorDetails.id"><a href="book/detail/{{bookDetails.id}}">{{bookDetails.name}}</a></td>
-                </ng-container>
+                <td><a href="/book/detail/{{bookDetails.id}}">{{bookDetails.name}}</a></td>
               </ng-container>
-
             </tr>
             </tbody>
           </table>
