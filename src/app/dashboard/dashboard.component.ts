@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   public formSearch: FormGroup;
-  public tes: any;
 
   constructor(private http: HttpClient, private router: Router ) { }
 
@@ -22,11 +21,7 @@ export class DashboardComponent implements OnInit {
     });
   }
   filterOptions() {
-    if (this.formSearch.value.inlineRadioOptions === 'author') {
-      this.router.navigate([`author/list/${this.formSearch.value.name}`]);
-    } else {
-      this.router.navigate([`book/list/${this.formSearch.value.name}`]);
-    }
+      this.router.navigate([`resultados/${this.formSearch.value.name}`]);
   }
 
 }
