@@ -13,7 +13,7 @@ export class AuthorComponent implements OnInit {
 
   ngOnInit() {
     this.http.get('http://localhost:8000/v1/author').toPromise().then( ret => {
-      this.author = ret;
+      this.author = [ret];
     });
   }
 }

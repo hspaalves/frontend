@@ -22,7 +22,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let details of author | paginate: { itemsPerPage: 1, currentPage: paginaAtual }; let i = index">
+            <tr *ngFor="let details of author ">
               <th>{{details.id}}</th>
               <th>{{details.name}}</th>
               <td><a class="btn btn-primary" href="/author/detail/{{ details.id }}"><i class="fas fa-list"></i> Detalhes</a></td>
@@ -31,7 +31,6 @@
             </tr>
             </tbody>
           </table>
-          <pagination-controls (pageChange)="paginaAtual = $event" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
         </div>
       </div>
     </div>

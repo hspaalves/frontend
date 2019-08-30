@@ -13,7 +13,7 @@ export class BooksComponent implements OnInit {
 
   ngOnInit() {
     this.http.get('http://localhost:8000/v1/book').toPromise().then( ret => {
-      this.book = ret;
+      this.book = [ret];
     });
   }
 
