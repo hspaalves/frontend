@@ -37,9 +37,11 @@
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let bookRes of bookResult">
-              <td><a href="author/detail/{{bookRes.id}}">{{bookRes.name}}</a></td>
-            </tr>
+            <ng-container *ngFor="let bookRes of bookResult">
+              <tr *ngFor="let resultsBook of bookRes.results">
+                <td><a href="author/detail/{{resultsBook['id']}}">{{resultsBook['name']}}</a></td>
+              </tr>
+            </ng-container>
             </tbody>
           </table>
         </div>

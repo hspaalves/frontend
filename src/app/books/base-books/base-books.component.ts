@@ -14,7 +14,7 @@ export class BaseBooksComponent implements OnInit {
 
   ngOnInit() {
     const bookSearch = 'http://localhost:8000/v1/book/?name=';
-    this.search(bookSearch).toPromise().then(res => {this.bookResult = res; });
+    this.search(bookSearch).toPromise().then(res => {this.bookResult = [res]; });
   }
   private search(urlSearch) {
     return this.http.get(`${urlSearch}${this.route.snapshot.paramMap.get('search')}`);

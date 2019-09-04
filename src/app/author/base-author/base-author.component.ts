@@ -14,7 +14,7 @@ export class BaseAuthorComponent implements OnInit {
 
   ngOnInit() {
     const authorSearch = 'http://localhost:8000/v1/author/?name=';
-    this.search(authorSearch).toPromise().then(res => {this.authorResult = res; });
+    this.search(authorSearch).toPromise().then(res => {this.authorResult = [res]; });
 
   }
   private search(urlSearch) {
