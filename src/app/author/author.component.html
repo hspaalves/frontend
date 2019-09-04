@@ -28,20 +28,18 @@
                 </tr>
               </thead>
               <tbody>
-              <ng-container *ngFor="let data of author ">
-                <tr *ngFor="let item of data.results">
+              <ng-container *ngFor="let details of author ">
+                <tr *ngFor="let item of details.results">
                   <td>{{ item["id"] }}</td>
                   <td>{{ item["name"] }}</td>
-                  <td><a class="btn btn-primary" href="/author/detail/{{ item.id }}"><i class="fas fa-list"></i> Detalhes</a></td>
-                  <td><a class="btn btn-primary" href="/author/{{ item.id }}"><i class="fas fa-edit"></i> Editar</a></td>
-                  <td><a class="btn btn-primary" href="/del/author/{{ item.id }}"><i class="fas fa-user-minus"></i> Deletar</a></td>
+                  <td><a class="btn btn-primary" href="/author/detail/{{ item['id'] }}"><i class="fas fa-list"></i> Detalhes</a></td>
+                  <td><a class="btn btn-primary" href="/author/{{ item['id'] }}"><i class="fas fa-edit"></i> Editar</a></td>
+                  <td><a class="btn btn-primary" href="/del/author/{{ item['id'] }}"><i class="fas fa-user-minus"></i> Deletar</a></td>
                 </tr>
-
                 </ng-container>
               </tbody>
             </table>
           </div>
-
         </div>
       </div>
     </div>

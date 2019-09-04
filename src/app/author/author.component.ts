@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-books',
@@ -16,7 +15,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class AuthorComponent implements OnInit {
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) { }
+  constructor(private http: HttpClient) { }
   public static i = 2;
   public author: any;
   selector = '.main-panel';
