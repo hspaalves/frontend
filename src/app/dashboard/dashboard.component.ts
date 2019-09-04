@@ -16,12 +16,18 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.formSearch = new FormGroup({
-      name: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      name: new FormControl('', [Validators.required, Validators.minLength(1)]),
       inlineRadioOptions: new FormControl(''),
     });
   }
   filterOptions() {
+    if (this.formSearch.value.inlineRadioOptions === 'author') {
+      this.router.navigate([`resultados/author/${this.formSearch.value.name}`]);
+    } else if (this.formSearch.value.inlineRadioOptions === 'book') {
+      this.router.navigate([`resultados/books/${this.formSearch.value.name}`]);
+    } else {
       this.router.navigate([`resultados/${this.formSearch.value.name}`]);
+    }
   }
 
 }

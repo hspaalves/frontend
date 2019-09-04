@@ -9,7 +9,7 @@
           <div class="col-md-8">
             <div class="input-group w-100 input-group-lg">
               <input formControlName="name"  type="text" class="form-control" id="nameSearch" placeholder="Search">
-              <div class="input-group-append"><button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button></div>
+              <div class="input-group-append"><button class="btn btn-primary" type="submit" [disabled]="!formSearch.valid"><i class="fa fa-search"></i></button></div>
             </div>
           </div>
         </div>
