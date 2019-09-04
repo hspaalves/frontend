@@ -12,7 +12,9 @@ import {BooksRemoveComponent} from './books/books-remove/books-remove.component'
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {BookDetailComponent} from './books/book-detail/book-detail.component';
 import {AuthorDetailComponent} from './author/author-detail/author-detail.component';
-import {ResultadosComponent} from "./resultados/resultados.component";
+import {ResultadosComponent} from './resultados/resultados.component';
+import {BaseBooksComponent} from './books/base-books/base-books.component';
+import {BaseAuthorComponent} from './author/base-author/base-author.component';
 
 
 const routes: Routes = [
@@ -68,6 +70,14 @@ const routes: Routes = [
   {
     path: 'resultados/:search',
     component: ResultadosComponent,
+  },
+  {
+    path: 'resultados/books/:search',
+    component: BaseBooksComponent,
+  },
+  {
+    path: 'resultados/author/:search',
+    component: BaseAuthorComponent,
   },
 ];
 
