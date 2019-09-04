@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthorComponent } from './author/author.component';
@@ -15,11 +15,11 @@ import { BooksAddComponent } from './books/books-add/books-add.component';
 import { BooksRemoveComponent } from './books/books-remove/books-remove.component';
 import { BooksEditComponent } from './books/books-edit/books-edit.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import {MatButtonModule} from '@angular/material';
 import { BookDetailComponent } from './books/book-detail/book-detail.component';
 import { AuthorDetailComponent } from './author/author-detail/author-detail.component';
 import { ResultadosComponent } from './resultados/resultados.component';
-
+import { BaseAuthorComponent } from './author/base-author/base-author.component';
+import { BaseBooksComponent } from './books/base-books/base-books.component';
 
 
 @NgModule({
@@ -36,7 +36,9 @@ import { ResultadosComponent } from './resultados/resultados.component';
     DashboardComponent,
     BookDetailComponent,
     AuthorDetailComponent,
-    ResultadosComponent
+    ResultadosComponent,
+    BaseAuthorComponent,
+    BaseBooksComponent
   ],
   imports: [
     FormsModule,
@@ -45,7 +47,7 @@ import { ResultadosComponent } from './resultados/resultados.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    MatButtonModule
+    InfiniteScrollModule
   ],
   providers: [
   ],
