@@ -16,7 +16,7 @@ export class BooksAddComponent implements OnInit {
 
   ngOnInit() {
     this.http.get('http://localhost:8000/v1/author').toPromise().then( ret => {
-      this.author = ret;
+      this.author = [ret];
     });
     this.formAddBook = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(5)]),
@@ -28,6 +28,6 @@ export class BooksAddComponent implements OnInit {
     this.http.post('http://localhost:8000/v1/book/', this.formAddBook.value).toPromise().then(ret => {
       this.book = ret;
     });
-    alert('Edição efetuada');
+    alert('Adicionado com sucesso');
   }
 }

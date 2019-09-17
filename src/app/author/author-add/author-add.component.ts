@@ -24,6 +24,6 @@ export class AuthorAddComponent implements OnInit {
     this.http.post('http://localhost:8000/v1/author/', this.formAddAuthor.value).toPromise().then(ret => {
       this.author = ret;
     });
-    alert('Edição efetuada');
+    alert('Adicionado com sucesso!');
   }
 }
